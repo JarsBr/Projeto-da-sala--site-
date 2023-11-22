@@ -3,118 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COLOCAR TITULO</title>
+    <title>Oque Jogar?</title>
+    <link rel="shortcut icon" href="img/icon.png">
     <link rel="stylesheet" href="style.css">
-    <!-- jQuery para o menu-->
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="menu.js"></script>
+    <link rel="stylesheet" href="menu.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 </head>
-<body>
-    <div class="fullscreen-menu-container js-menu-container">
+<body id="index">
 
-        <a class="menu-button js-menu-close">
-            <div class="menu-icon is-active">
-                <span></span>
-                <span></span>
-                <span></span>
+    <header class="header">
+        <div class="menu-container"></div>
+
+        <script src="menu.js"></script>
+	</header>
+
+    <div class="card-index">
+        <div class="card-index-img">
+            <div class="slider">
+                <div><img src="img/foto-slider-1.png" alt="Imagem 1"></div>
+                <div><img src="img/foto-slider-2.png" alt="Imagem 2"></div>
+                <div><img src="img/foto-slider-3.png" alt="Imagem 3"></div>
+                <div><img src="img/foto-slider-4.png" alt="Imagem 4"></div>
+                <div><img src="img/foto-slider-5.png" alt="Imagem 5"></div>
+                <!-- Adicione mais divs conforme necessário para mais imagens -->
             </div>
-        </a>
-
-        <div class="fullscreen-menu">
-
-            <div class="fullscreen-menu__image-container"></div>
-
-            <h1 class="fullscreen-menu__title">Fullscreen Menu with jQuery and Flexbox.</h1>
-
-            <nav class="fullscreen-menu__nav">
-                <ul>
-
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-
-                    <li>
-                        <a href="#">Portfolio</a>
-                    </li>
-
-                    <li>
-                        <a href="#">Résumé</a>
-                    </li>
-
-                    <li>
-                        <a href="#">Blog</a>
-                    </li>
-
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-
-                </ul>
-            </nav>
-
-            <a target="_blank" href="https://twitter.com/matchboxhero10" class="social-button--twitter">
-                <i class="icon--twitter"></i>
-            </a>
-
-            <a target="_blank" href="#" class="social-button--facebook">
-                <i class="icon--facebook"></i>
-            </a>
-
-            <a target="_blank" href="#" class="social-button--pintrest">
-                <i class="icon--pintrest"></i>
-            </a>
-
         </div>
-
+        <div class="card-index-text">
+            <p>Inicio do site</p>
+        </div>
     </div>
+    
 
-    <article class="card">
+    <script>
+        $(document).ready(function(){
+            $('.slider').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                arrows: true, // Se quiser setas de navegação
+                dots: true // Se quiser indicadores de navegação
+            });
+        });
+    </script>
 
-        <aside class="card__image-container">
-
-            <a class="menu-button js-menu-button">
-                <div class="menu-icon">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </a>
-
-            <img class="card__image" src="https://source.unsplash.com/random">
-
-        </aside>
-
-        <section class="card__contents">
-
-            <header class="card__header">
-                <h1 class="card__title">Fullscreen Menu with jQuery and Flexbox.</h1>
-            </header>
-
-            <section class="card__body">
-                <p>Navigation is one of the most important elements of your website so today we'll be creating a modern overlay style menu using jQuery and Flexbox.</p>
-
-                <p>Starting with the layout for mobile we'll stack the elements on top of one another and then move on to centre the elements and share the available space between navigation items when the viewport is large enough and then fix the whole content block perfectly centred at a set maximum width, allowing the height to be dictated by the content.</p>
-            </section>
-
-            <footer class="card__footer">
-
-                <a target="_blank" href="https://twitter.com/matchboxhero10" class="social-button--twitter">
-                    <i class="icon--twitter"></i>
-                </a>
-
-                <a target="_blank" href="#" class="social-button--facebook">
-                    <i class="icon--facebook"></i>
-                </a>
-
-                <a target="_blank" href="#" class="social-button--pintrest">
-                    <i class="icon--pintrest"></i>
-                </a>
-
-            </footer>
-
-        </section>
-
-    </article>
 
 </body>
 </html>

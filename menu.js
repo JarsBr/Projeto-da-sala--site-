@@ -1,45 +1,75 @@
-/////
-//
-// Title: Fullscreen Menu with jQuery and Flexbox
-// Author: Steven Roberts
-//
-/////
+const linkLogoMenu = 'img/logo.png';
+const linkHamburger = 'img/menu.png'; // Substitua pelo caminho do seu ícone de hamburger
 
-// Functions
+const menuItems = [
+    { text: 'index', link: 'index.html' },
+    { text: 'menu', link: 'menu.html'},
+    { text: 'jogos', link: 'jogos.html' },
+    { text: 'vencedores', link: 'vencedores.html' },
+    { text: 'eventos', link: 'eventos.html' },
+    { text: 'Sobre Min', link: 'sobre-min.html' }
+];
 
-function openMenu() {
-    $('.js-menu-container').addClass('is-open'); // Find element with the class 'js-menu-container' and apply an additional class of 'is-open'
-}
+document.addEventListener("DOMContentLoaded", function () {
+    createMenu(menuItems, linkLogoMenu, linkHamburger);
+    const hamburger = document.querySelector(".hamburger");
+    const nav = document.querySelector(".nav");
 
-
-function closeMenu() {
-    $('.js-menu-container').removeClass('is-open'); // Find element with the class 'js-menu-container' and remove the class 'is-open'
-}
-
-// Document Ready
-
-jQuery(document).ready(function($){ // When everything has finished loading
-
-    $('.js-menu-button').click(function(){ // When the element with the class 'js-menu-button' is clicked
-        openMenu(); // Run the openMenu function
+    hamburger.addEventListener("click", function() {
+        nav.classList.toggle("active");
     });
-
-    $('.js-menu-close').click(function(){ // When the element with the class 'js-menu-close' is clicked
-        closeMenu(); // Run the closeMenu function
-    });
-
 });
 
-// Keyboard Accessibility
+function createMenu(menuItems, linkLogoMenu, linkHamburger) {
+    const header = document.createElement('header');
+    header.classList.add('header');
 
-jQuery(document).keyup(function(e) { // Listen for keyboard presses
+    const nav = document.createElement('nav');
+    nav.classList.add('nav');
 
-    if (e.keyCode === 27) { // 'Esc' key
+    const logoLink = document.createElement('a');
+    logoLink.href = '';
+    logoLink.classList.add('logo');
 
-        if ($('.js-menu-container').hasClass('is-open')) { // If the menu is open close it
-            closeMenu(); // Run the closeMenu function
+    const logoImg = document.createElement('img');
+    logoImg.src = linkLogoMenu;
+    logoImg.alt = '';
+    logoLink.appendChild(logoImg);
+
+    const hamburgerBtn = document.createElement('button');
+    hamburgerBtn.classList.add('hamburger');
+
+    const hamburgerImg = document.createElement('img');
+    hamburgerImg.src = linkHamburger;
+    hamburgerImg.alt = '';
+    hamburgerBtn.appendChild(hamburgerImg);
+
+    const ul = document.createElement('ul');
+    ul.classList.add('nav-list');
+
+    menuItems.forEach(item => {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = item.link;
+        a.textContent = item.text;
+        if (item.target) {
+            a.target = item.target;
         }
+        li.appendChild(a);
+        ul.appendChild(li);
+    });
 
-    }
+    nav.appendChild(logoLink);
+    nav.appendChild(hamburgerBtn);
+    nav.appendChild(ul);
+    header.appendChild(nav);
 
-});
+    // Inserindo o menu no elemento com a classe 'menu-container'
+    const menuContainer = document.querySelector('.menu-container');
+    menuContainer.appendChild(header);
+}
+
+const hamburger = document.querySelector(".hamburger");
+const nav = document.querySelector(".nav");
+
+hamburger.addEventListener("click", () => nav.classList.toggle("active"));
