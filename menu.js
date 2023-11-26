@@ -1,4 +1,4 @@
-const linkLogoMenu = 'img/logo.png';
+const linkLogoMenu = 'img/logo2.png';
 const linkHamburger = 'img/menu.png'; // Substitua pelo caminho do seu ícone de hamburger
 
 const menuItems = [
