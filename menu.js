@@ -1,12 +1,12 @@
-const linkLogoMenu = 'img/logo2.png';
+const linkLogoMenu = 'img/logo4.png';
 const linkHamburger = 'img/menu.png'; // Substitua pelo caminho do seu ícone de hamburger
 
 const menuItems = [
-    { text: 'index', link: 'index.html' },
-    { text: 'menu', link: 'menu.html'},
-    { text: 'jogos', link: 'jogos.html' },
-    { text: 'vencedores', link: 'vencedores.html' },
-    { text: 'eventos', link: 'eventos.html' },
+    { text: 'Perfil', link: 'index.html' },
+    { text: 'Menu', link: 'menu.html'},
+    { text: 'Jogos', link: 'jogos.html' },
+    { text: 'Vencedores', link: 'vencedores.html' },
+    { text: 'Eventos', link: 'eventos.html' },
     { text: 'Sobre Min', link: 'sobre-min.html' }
 ];
 

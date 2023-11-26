@@ -51,6 +51,8 @@ menu.html
 vencedores.html
 */
 
+
+
 .card-vencedores {
   display: flex;
   margin: 5%;
@@ -60,23 +62,37 @@ vencedores.html
   padding: 2%;
   box-shadow: 10px 5px 5px #090f0f;
 
-  background-size: 300% ;
+  background-size: 300%;
   background-position: left;
   transition: 600ms background-position ease-in-out;
 
 }
 
 @keyframes treme {
-  0% {margin-left: 0;}
-  25% {margin-left: 5px;}
-  50% {margin-left: 0;}
-  75% {margin-left: -5px;}
-  100% {margin-left: 0;}
+  0% {
+    margin-left: 0;
+  }
+
+  25% {
+    margin-left: 5px;
+  }
+
+  50% {
+    margin-left: 0;
+  }
+
+  75% {
+    margin-left: -5px;
+  }
+
+  100% {
+    margin-left: 0;
+  }
 }
 
 .card-vencedores:hover {
 
-  background-position: right; 
+  background-position: right;
 }
 
 /*  animation: treme 0.1s;
@@ -119,19 +135,54 @@ vencedores.html
 }
 
 .link-vencedor a:hover {
-    margin: 0.1%;
-    color: #cfab05;
+  margin: 0.1%;
+  color: #cfab05;
 }
 
 /*
 jogos.html
 */
 
+.link-jogos {
+  background-color: rgba(0, 0, 0, 0.2);
+  text-align: center;
+  justify-content: space-around;
+  padding: 1%;
+}
+
+
+.link-jogos a {
+  text-decoration: none;
+  color: white;
+  font-size: medium;
+  transition: color 0.3s ease;
+}
+
+.link-jogos a:hover {
+  margin: 0.1%;
+  color: #655872;
+}
+
+.header {
+  background: #090f0f;
+  background: linear-gradient(#251c2f, #090f0f);
+  padding-inline: 16px;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0px 5px 40px #090f0f;
+  z-index: 1;
+}
+
 #jogos {
   padding: 0;
 }
 
 .painel-jogos {
+  padding: 5%;
+}
+
+.painel-jogos-genero {
+  border-radius: 10%;
   width: 80%;
   margin: 0 auto;
   padding: 20px 0;
@@ -148,17 +199,19 @@ jogos.html
 }
 
 .card-jogo {
-  width: 300px;
+  width: 400px;
+  height: 300px;
   margin: 20px;
   padding: 10px;
   border: 5px solid black;
   text-align: center;
 }
 
-.card img {
-  max-width: 100%;
+.card-jogo img {
+  max-width:70%;
+  max-height:70%;
+  width: auto;
   height: auto;
-  border-radius: 5px;
 }
 
 .card h2 {
@@ -177,10 +230,19 @@ body {
   background: linear-gradient(90deg, #2f4f4f 0%, #1c2f2f 35%, #121f1f 100%);
 }
 
-.particle {
+#vencedor-body .particle {
   position: absolute;
   border-radius: 50%;
   background-color: #ffe252;
+  box-shadow: 0 0 3px white;
+  animation-duration: 60s;
+  animation-iteration-count: infinite;
+}
+
+#jogos .particle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #251c2f;
   box-shadow: 0 0 3px white;
   animation-duration: 60s;
   animation-iteration-count: infinite;
@@ -202,7 +264,8 @@ body {
   animation-delay: -0.2s;
   transform: translate3d(55vw, 79vh, 22px);
 }
-@keyframes  particle1 {
+
+@keyframes particle1 {
   100% {
     transform: translate3d(80vw, 51vh, 9px);
   }
@@ -214,7 +277,8 @@ body {
   animation-delay: -0.4s;
   transform: translate3d(4vw, 21vh, 14px);
 }
-@keyframes  particle2 {
+
+@keyframes particle2 {
   100% {
     transform: translate3d(31vw, 35vh, 87px);
   }
@@ -226,7 +290,8 @@ body {
   animation-delay: -0.6s;
   transform: translate3d(78vw, 63vh, 52px);
 }
-@keyframes  particle3 {
+
+@keyframes particle3 {
   100% {
     transform: translate3d(42vw, 66vh, 40px);
   }
@@ -238,7 +303,8 @@ body {
   animation-delay: -0.8s;
   transform: translate3d(56vw, 32vh, 88px);
 }
-@keyframes  particle4 {
+
+@keyframes particle4 {
   100% {
     transform: translate3d(78vw, 4vh, 55px);
   }
@@ -250,7 +316,8 @@ body {
   animation-delay: -1s;
   transform: translate3d(79vw, 74vh, 14px);
 }
-@keyframes  particle5 {
+
+@keyframes particle5 {
   100% {
     transform: translate3d(2vw, 47vh, 68px);
   }
@@ -262,7 +329,8 @@ body {
   animation-delay: -1.2s;
   transform: translate3d(92vw, 27vh, 61px);
 }
-@keyframes  particle6 {
+
+@keyframes particle6 {
   100% {
     transform: translate3d(80vw, 35vh, 11px);
   }
@@ -274,7 +342,8 @@ body {
   animation-delay: -1.4s;
   transform: translate3d(55vw, 60vh, 75px);
 }
-@keyframes  particle7 {
+
+@keyframes particle7 {
   100% {
     transform: translate3d(63vw, 15vh, 59px);
   }
@@ -286,7 +355,8 @@ body {
   animation-delay: -1.6s;
   transform: translate3d(10vw, 10vh, 55px);
 }
-@keyframes  particle8 {
+
+@keyframes particle8 {
   100% {
     transform: translate3d(30vw, 64vh, 91px);
   }
@@ -298,7 +368,8 @@ body {
   animation-delay: -1.8s;
   transform: translate3d(3vw, 53vh, 98px);
 }
-@keyframes  particle9 {
+
+@keyframes particle9 {
   100% {
     transform: translate3d(60vw, 80vh, 97px);
   }
@@ -310,7 +381,8 @@ body {
   animation-delay: -2s;
   transform: translate3d(64vw, 77vh, 95px);
 }
-@keyframes  particle10 {
+
+@keyframes particle10 {
   100% {
     transform: translate3d(18vw, 5vh, 7px);
   }
@@ -322,7 +394,8 @@ body {
   animation-delay: -2.2s;
   transform: translate3d(35vw, 6vh, 101px);
 }
-@keyframes  particle11 {
+
+@keyframes particle11 {
   100% {
     transform: translate3d(88vw, 14vh, 71px);
   }
@@ -334,7 +407,8 @@ body {
   animation-delay: -2.4s;
   transform: translate3d(55vw, 12vh, 33px);
 }
-@keyframes  particle12 {
+
+@keyframes particle12 {
   100% {
     transform: translate3d(46vw, 5vh, 3px);
   }
@@ -346,7 +420,8 @@ body {
   animation-delay: -2.6s;
   transform: translate3d(90vw, 27vh, 70px);
 }
-@keyframes  particle13 {
+
+@keyframes particle13 {
   100% {
     transform: translate3d(51vw, 75vh, 18px);
   }
@@ -358,7 +433,8 @@ body {
   animation-delay: -2.8s;
   transform: translate3d(3vw, 73vh, 11px);
 }
-@keyframes  particle14 {
+
+@keyframes particle14 {
   100% {
     transform: translate3d(45vw, 46vh, 28px);
   }
@@ -370,7 +446,8 @@ body {
   animation-delay: -3s;
   transform: translate3d(86vw, 82vh, 49px);
 }
-@keyframes  particle15 {
+
+@keyframes particle15 {
   100% {
     transform: translate3d(16vw, 31vh, 36px);
   }
