@@ -9,22 +9,24 @@
   <link rel="stylesheet" href="menu.css">
   <link rel="stylesheet" href="style.css">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 </head>
 
 <body id="jogos">
 
-  <header class="header">
+  <header id="voltar" class="header">
     <div class="menu-container"></div>
 
     <script src="menu.js"></script>
   </header>
 
   <div class="link-jogos">
-    <a href=""> Ação </a>
-    <a href=""> Aventura</a>
-    <a href=""> RPG</a>
-    <a href=""> FPS</a>
-    <a href=""> Sobrevivência</a>
+    <a href="#Ação"> Ação </a>
+    <a href="#Aventura"> Aventura </a>
+    <a href="#RPG"> RPG </a>
+    <a href="#FPS"> FPS </a>
+    <a href="#Sobrevivência"> Sobrevivência </a>
   </div>
 
   <div id="container">
@@ -46,7 +48,47 @@
   </div>
 
   <div class="painel-jogos-genero">
-    <h1>RPG</h1>
+    <h1><a href="#voltar"><i class="fas fa-arrow-up icon-up"></i></a> <a id="Ação">Ação</a></h1>
+    <div class="card-jogo-todos">
+      <div class="card-jogo">
+        <img src="img/DragonAge.jpg" alt="Jogo 1">
+        <h2>Jogo 5</h2>
+      </div>
+      <div class="card-jogo">
+        <img src="img/DragonAge.jpg" alt="Jogo 2">
+        <h2>Jogo 6</h2>
+      </div>
+      <div class="card-jogo">
+        <img src="img/DragonAge.jpg" alt="Jogo 3">
+        <h2>Jogo 7</h2>
+      </div>
+      <div class="card-jogo">
+        <img src="img/DragonAge.jpg" alt="Jogo 4">
+        <h2>Jogo 8</h2>
+      </div>
+    </div>
+  </div>
+
+  <div id="container">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+
+  <div class="painel-jogos-genero">
+    <h1><a href="#voltar"><i class="fas fa-arrow-up icon-up"></i></a> <a id="Aventura">Aventura</a></h1>
     <div class="card-jogo-todos">
       <div class="card-jogo">
         <img src="img/DragonAge.jpg" alt="Jogo 5">
@@ -86,62 +128,22 @@
   </div>
 
   <div class="painel-jogos-genero">
-    <h1>MOBA</h1>
+    <h1><a href="#voltar"><i class="fas fa-arrow-up icon-up"></i></a> <a id="RPG">RPG</a></h1>
     <div class="card-jogo-todos">
       <div class="card-jogo">
-        <img src="img/DragonAge.jpg" alt="Jogo 5">
-        <h2>Jogo 5</h2>
-      </div>
-      <div class="card-jogo">
-        <img src="img/DragonAge.jpg" alt="Jogo 6">
-        <h2>Jogo 6</h2>
-      </div>
-      <div class="card-jogo">
-        <img src="img/DragonAge.jpg" alt="Jogo 7">
-        <h2>Jogo 7</h2>
-      </div>
-      <div class="card-jogo">
-        <img src="img/DragonAge.jpg" alt="Jogo 8">
-        <h2>Jogo 8</h2>
-      </div>
-    </div>
-  </div>
-
-  <div id="container">
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-  </div>
-
-  <div class="painel-jogos-genero">
-    <h1>FPS</h1>
-    <div class="card-jogo-todos">
-      <div class="card-jogo">
-        <img src="img/fps1.png" alt="Jogo 1">
+        <img src="img/fps1.png" alt="Jogo 9">
         <h2>Jogo 1</h2>
       </div>
       <div class="card-jogo">
-        <img src="img/fps2.jpg" alt="Jogo 2">
+        <img src="img/fps2.jpg" alt="Jogo 10">
         <h2>Jogo 2</h2>
       </div>
       <div class="card-jogo">
-        <img src="img/fps3.jpg" alt="Jogo 3">
+        <img src="img/fps3.jpg" alt="Jogo 11">
         <h2>Jogo 3</h2>
       </div>
       <div class="card-jogo">
-        <img src="img/fps4.jpeg" alt="Jogo 4">
+        <img src="img/fps4.jpeg" alt="Jogo 12">
         <h2>Jogo 4</h2>
       </div>
     </div>
@@ -167,22 +169,70 @@
   </div>
 
   <div class="painel-jogos-genero">
-    <h1>MMO-RPG</h1>
+    <h1><a href="#voltar"><i class="fas fa-arrow-up icon-up"></i></a> <a id="FPS">FPS</a></h1>
     <div class="card-jogo-todos">
       <div class="card-jogo">
-        <img src="img/DragonAge.jpg" alt="Jogo 5">
+        <a href="#" target="_blank">
+        <img src="img/fps1.png" alt="Jogo 13">
+        <h2>Call of Duty: Modern Warfare II</h2>
+      </a>
+      </div>
+      <div class="card-jogo">
+        <a href="#" target="_blank">
+        <img src="img/fps2.jpg" alt="Jogo 14">
+        <h2>Counter-Strike: Global Offensive</h2>
+      </a>
+      </div>
+      <div class="card-jogo">
+        <a href="#" target="_blank">
+          <img src="img/fps3.jpg" alt="Jogo 15">
+          <h2>Doom (2016)</h2>
+        </a>
+      </div>
+      <div class="card-jogo">
+        <a href="https://playvalorant.com/pt-br/" target="_blank">
+          <img src="img/fps4.jpeg" alt="Jogo 16">
+          <h2>Valorant</h2>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div id="container">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+
+  <div class="painel-jogos-genero">
+    <h1><a href="#voltar"><i class="fas fa-arrow-up icon-up"></i></a> <a id="Sobrevivência">Sobrevivência</a></h1>
+    <div class="card-jogo-todos">
+      <div class="card-jogo">
+        <img src="img/DragonAge.jpg" alt="Jogo 17">
         <h2>Jogo 5</h2>
       </div>
       <div class="card-jogo">
-        <img src="img/DragonAge.jpg" alt="Jogo 6">
+        <img src="img/DragonAge.jpg" alt="Jogo 18">
         <h2>Jogo 6</h2>
       </div>
       <div class="card-jogo">
-        <img src="img/DragonAge.jpg" alt="Jogo 7">
+        <img src="img/DragonAge.jpg" alt="Jogo 19">
         <h2>Jogo 7</h2>
       </div>
       <div class="card-jogo">
-        <img src="img/DragonAge.jpg" alt="Jogo 8">
+        <img src="img/DragonAge.jpg" alt="Jogo 20">
         <h2>Jogo 8</h2>
       </div>
     </div>

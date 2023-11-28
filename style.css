@@ -2,12 +2,54 @@
   font-family: Consolas;
 }
 
+.nav-list a:hover {
+  color: #655872;
+}
+
+span:nth-child(1) {
+  color: rgb(100, 50, 200);
+}
+
+span:nth-child(2) {
+  color: rgb(50, 150, 100);
+}
+
+span:nth-child(3) {
+  color: rgb(200, 20, 100);
+}
+
+span.hover-span {
+  position: relative;
+}
+
+span.hover-span::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+  z-index: 99;
+  max-width: 1000px;
+}
+
+span.hover-span:hover::after {
+  opacity: 1;
+}
+
 
 /*
 menu.html
 */
 
 #menu {
+  color: white;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -24,14 +66,21 @@ menu.html
 
 .card-menu-img {
   border: 5px solid black;
+  border-radius: 20px;
   max-width: 600px;
   width: 100%;
+  padding: 2%;
   margin-bottom: 20px;
+  background: linear-gradient(#251c2f, #090f0f);
+  box-shadow: 0px 5px 40px #090f0f;
+
 }
 
 .slider {
   width: 90%;
-  margin: 1% auto;
+  margin: 2% auto;
+  border: 3px solid white;
+  border-radius: 5px;
 }
 
 .slider img {
@@ -41,10 +90,24 @@ menu.html
 
 .card-menu-text {
   border: 5px solid black;
+  background: linear-gradient(#251c2f, #090f0f);
+  box-shadow: 0px 5px 40px #090f0f;
   max-width: 600px;
   width: 100%;
   padding: 20px;
+  border-radius: 20px;
+  
 }
+
+.slider li {
+  background-color: white;
+  border-radius: 100px;
+}
+
+.slider ul {
+  bottom: -35px;
+}
+
 
 
 /*
@@ -158,6 +221,12 @@ jogos.html
   transition: color 0.3s ease;
 }
 
+.painel-jogos-genero a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
 .link-jogos a:hover {
   margin: 0.1%;
   color: #655872;
@@ -199,17 +268,52 @@ jogos.html
 }
 
 .card-jogo {
-  width: 400px;
+  width: 300px;
   height: 300px;
   margin: 20px;
   padding: 10px;
-  border: 5px solid black;
+  border: 3px solid black;
   text-align: center;
+
+  background: #251c2f;
+  background: linear-gradient(90deg, #251c2f, #3f2f4f 35%, #251c2f 100%);
+  border-radius: 20px;
+  padding: 2%;
+  box-shadow: 10px 5px 5px #19121f;
+
+  background-size: 300%;
+  background-position: left;
+  transition: 400ms background-position ease-in-out;
+}
+
+#jogos-menu .card-jogo {
+  width: 200px;
+  height: 250px;
+  margin: 10px;
+  padding: 10px;
+  border: 3px solid black;
+  text-align: center;
+
+  background: #251c2f;
+  background: linear-gradient(90deg, #251c2f, #3f2f4f 35%, #251c2f 100%);
+  border-radius: 20px;
+  padding: 2%;
+  box-shadow: 10px 5px 5px #19121f;
+
+  background-size: 300%;
+  background-position: left;
+  transition: 400ms background-position ease-in-out;
+}
+
+.card-jogo:hover {
+  background-position: right;
+  border: 3px solid black;
 }
 
 .card-jogo img {
-  max-width:70%;
-  max-height:70%;
+  border: 3px solid black;
+  max-width:76%;
+  max-height:76%;
   width: auto;
   height: auto;
 }
@@ -230,19 +334,29 @@ body {
   background: linear-gradient(90deg, #2f4f4f 0%, #1c2f2f 35%, #121f1f 100%);
 }
 
-#vencedor-body .particle {
-  position: absolute;
-  border-radius: 50%;
-  background-color: #ffe252;
-  box-shadow: 0 0 3px white;
-  animation-duration: 60s;
-  animation-iteration-count: infinite;
-}
 
 #jogos .particle {
   position: absolute;
   border-radius: 50%;
   background-color: #251c2f;
+  box-shadow: 0 0 3px white;
+  animation-duration: 60s;
+  animation-iteration-count: infinite;
+}
+
+#menu .particle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #251c2f;
+  box-shadow: 0 0 3px white;
+  animation-duration: 60s;
+  animation-iteration-count: infinite;
+}
+
+#vencedor-body .particle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #ffe252;
   box-shadow: 0 0 3px white;
   animation-duration: 60s;
   animation-iteration-count: infinite;
@@ -456,3 +570,22 @@ body {
 /*
 }
 */
+
+@media only screen and (max-width: 600px) {
+  .card-menu {
+    margin: auto;
+    margin-top: 5%;
+    max-width: 85%;
+  }
+  .header{
+    max-width: 100%;
+  }
+
+  .logo {
+    margin-left: 5%;
+  }
+
+  .nav .hamburger {
+    margin-right: 5%;
+  }
+}

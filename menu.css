@@ -154,6 +154,8 @@ h2 {
         align-items: center;
         gap: 0;
         position: none;
+        border: 10px solid black;
+        background-color: black;
         /*Nao deixa o usuario clicar em algo que esta escondia com a mascara*/
     }
 

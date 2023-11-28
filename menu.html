@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,14 +14,37 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 </head>
+
 <body id="menu">
     <header class="header">
         <div class="menu-container"></div>
 
         <script src="menu.js"></script>
-	</header>
-
+    </header>
+    <div id="container">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
     <div class="card-menu">
+        <h2>"Jogue, Ganhe, Conecte-se -
+            <span class="hover-span" data-text="https://oquejogar.netlify.app">
+                Oque Jogar
+            </span> - O Mundo dos Jogos ao Seu Alcance!"
+        </h2>
+
         <div class="card-menu-img">
             <div class="slider">
                 <div><img src="img/foto-slider-1.png" alt="Imagem 1"></div>
@@ -31,14 +55,38 @@
                 <!-- Adicione mais divs conforme necessário para mais imagens -->
             </div>
         </div>
+
         <div class="card-menu-text">
-            <p>Inicio do site</p>
+            <h2>"Oque o site tem a oferece?"</h2>
+            <p> Explore um mundo de entretenimento interativo. 'Oque Jogar' é o seu
+                destino definitivo para descobrir uma vasta seleção de jogos emocionantes e envolventes.
+            </p>
+            <h2>Jogos</h2>
+            <p>
+                Navegue pelo
+                nosso painel de jogos diversificados, mergulhe em aventuras épicas, desvende quebra-cabeças desafiadores
+                e explore mundos que expandem sua imaginação.
+
+            </p>
+            <br>
+            <h2>Vencedores</h2>
+            <p>
+                Nosso site oferece uma lista exclusiva de vencedores de prêmios, destacando os jogos mais
+                aclamados e reconhecidos pela comunidade. Fique por dentro dos títulos que conquistaram corações e
+                mentes ao redor do mundo.
+            </p>
+            <br>
+            <h2>Eventos</h2>
+            <p>
+                E não acaba por aí! Nosso guia de eventos de jogos mantém você atualizado sobre as últimas novidades,
+                lançamentos e competições emocionantes no mundo dos jogos.
+            </p>
         </div>
     </div>
-    
+
 
     <script>
-        $(document).ready(function(){
+        $(document).ready(function () {
             $('.slider').slick({
                 slidesToShow: 1,
                 slidesToScroll: 1,
@@ -50,6 +98,89 @@
         });
     </script>
 
+    <div id="jogos-menu">
+        <div class="painel-jogos-genero">
+            <center>
+                <h2>Descubra os melhores <span>jogos</span></h2>
+            </center>
+            <div class="card-jogo-todos">
+                <div class="card-jogo">
+                    <img src="img/DragonAge.jpg" alt="Jogo 1">
+                    <h2>Jogo 5</h2>
+                </div>
+                <div class="card-jogo">
+                    <img src="img/DragonAge.jpg" alt="Jogo 2">
+                    <h2>Jogo 6</h2>
+                </div>
+                <div class="card-jogo">
+                    <img src="img/DragonAge.jpg" alt="Jogo 3">
+                    <h2>Jogo 7</h2>
+                </div>
+                <div class="card-jogo">
+                    <img src="img/DragonAge.jpg" alt="Jogo 4">
+                    <h2>Jogo 8</h2>
+                </div>
+                <div class="card-jogo">
+                    <img src="img/DragonAge.jpg" alt="Jogo 4">
+                    <h2>Jogo 8</h2>
+                </div>
+                <div class="card-jogo">
+                    <img src="img/DragonAge.jpg" alt="Jogo 4">
+                    <h2>Jogo 8</h2>
+                </div>
+                <div class="card-jogo">
+                    <img src="img/DragonAge.jpg" alt="Jogo 4">
+                    <h2>Jogo 8</h2>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div id="vencedor-body">
+        <div id="container">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+
+
+        <div class="card-vencedores">
+
+            <div class="card-vencedores-img">
+                <img class="img-vencedores" src="img/Witcher3.jpg" alt="">
+            </div>
+
+
+            <div class="card-vencedores-text">
+                <center>
+                    <h2>Titulo</h2>
+                    <p>dadadadadadad</p>
+                    <br>
+                    <p>dadadadadadad</p>
+                </center>
+            </div>
+
+            <div class="card-vencedores-img">
+                <img class="img-vencedores" src="img/Witcher3.jpg" alt="">
+            </div>
+
+        </div>
+    </div>
 
 </body>
+
 </html>
