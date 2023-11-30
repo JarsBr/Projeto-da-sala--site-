@@ -7,7 +7,7 @@ const menuItems = [
     { text: 'Jogos', link: 'jogos.html' },
     { text: 'Vencedores', link: 'vencedores.html' },
     { text: 'Eventos', link: 'eventos.html' },
-    { text: 'Sobre Min', link: 'sobre-min.html' }
+    { text: 'Sobre Mim', link: 'sobre-min.html' }
 ];
 
 document.addEventListener("DOMContentLoaded", function () {

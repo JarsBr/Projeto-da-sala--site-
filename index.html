@@ -3,17 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oque Jogar?</title>
+    <title>Perfil</title>
     <link rel="shortcut icon" href="img/icon.png">
     <link rel="stylesheet" href="menu.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="perfil.css">
 
 </head>
-<body>
+<body id="index">
     <header class="header">
         <div class="menu-container"></div>
 
         <script src="menu.js"></script>
 	</header>
+
+    <div id="container">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <div class="perfil-container">
+        <h1>Meu Perfil</h1>
+
+        <div class="perfil-form">
+            <div class="input-fields">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="idade">Idade:</label>
+                <input type="number" id="idade" name="idade" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="foto">Foto de perfil:</label>
+                <input type="file" id="foto" name="foto" accept="image/*">
+            </div>
+
+            <div class="display-info" style="display: none;">
+                <h2>Informações do Perfil:</h2>
+                <img src="" alt="Foto de perfil" id="display-foto">
+                <p><strong>Nome:</strong> <span id="display-nome"></span></p>
+                <p><strong>Idade:</strong> <span id="display-idade"></span></p>
+                <p><strong>Email:</strong> <span id="display-email"></span></p>
+                
+            </div>
+
+            <button id="salvarBtn">Salvar</button>
+            <button id="editarBtn" style="display: none;">Editar</button>
+        </div>
+    </div>
+
+    <script src="perfil.js"></script> <!-- Arquivo JavaScript para manipulação -->
+
 </body>
 </html>

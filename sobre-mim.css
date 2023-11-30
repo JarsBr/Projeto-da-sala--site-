@@ -1,0 +1,90 @@
+/* Estilos gerais */
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    color: white;
+}
+
+.about-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.about-me h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.about-me p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Estilos para diferentes seções */
+.left-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100px; /* Ajuste conforme necessário */
+    padding-right: 20px;
+}
+
+.profile-image {
+    width: 100px; /* Ajuste conforme necessário */
+    height: 100px; /* Ajuste conforme necessário */
+    border-radius: 50%;
+    background-image: url('img/jars.jpg');
+    background-size: cover;
+    background-position: center;
+    /* Estilos para criar uma imagem redonda */
+}
+
+.middle-section {
+    flex: 2;
+    padding: 20px;
+}
+
+.right-section {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-left: 20px;
+}
+
+/* Estilos para ícones de redes sociais */
+.social-icons {
+    display: flex;
+}
+
+.icon-link {
+    margin-right: 10px;
+    /* Estilos adicionais conforme necessário */
+}
+
+/* Estilos para responsividade em dispositivos móveis */
+@media screen and (max-width: 768px) {
+    .about-me {
+        flex-direction: column;
+    }
+
+    .left-section,
+    .middle-section,
+    .right-section {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+
+    .right-section {
+        justify-content: center;
+    }
+    .social-icons {
+        margin-left: 20%;
+    }
+}

@@ -67,7 +67,7 @@ menu.html
 .card-menu-img {
   border: 5px solid black;
   border-radius: 20px;
-  max-width: 600px;
+  max-width: 1000px;
   width: 100%;
   padding: 2%;
   margin-bottom: 20px;
@@ -92,7 +92,7 @@ menu.html
   border: 5px solid black;
   background: linear-gradient(#251c2f, #090f0f);
   box-shadow: 0px 5px 40px #090f0f;
-  max-width: 600px;
+  max-width: 800px;
   width: 100%;
   padding: 20px;
   border-radius: 20px;
@@ -113,8 +113,6 @@ menu.html
 /*
 vencedores.html
 */
-
-
 
 .card-vencedores {
   display: flex;
@@ -232,9 +230,12 @@ jogos.html
   color: #655872;
 }
 
+.card-jogo h2 {
+  color: white;
+}
+
 .header {
   background: #090f0f;
-  background: linear-gradient(#251c2f, #090f0f);
   padding-inline: 16px;
   margin: 0;
   padding: 0;
@@ -272,7 +273,6 @@ jogos.html
   height: 300px;
   margin: 20px;
   padding: 10px;
-  border: 3px solid black;
   text-align: center;
 
   background: #251c2f;
@@ -325,6 +325,88 @@ jogos.html
 
 
 /*
+eventos.html
+*/
+
+.link-eventos {
+  background-color: rgba(0, 0, 0, 0.2);
+  text-align: center;
+  justify-content: space-around;
+  padding: 1%;
+}
+
+
+.link-eventos a {
+  text-decoration: none;
+  color: white;
+  font-size: medium;
+  transition: color 0.3s ease;
+}
+
+.link-eventos a:hover {
+  margin: 0.1%;
+  color: #655872;
+}
+
+
+.card-eventos {
+  display: flex;
+  margin: 5%;
+  background: #251c2f;
+  background: linear-gradient(90deg, #251c2f, #3f2f4f 35%, #251c2f 100%);
+  border-radius: 20px;
+  padding: 2%;
+  box-shadow: 10px 5px 5px #251c2f;
+
+  background-size: 300%;
+  background-position: left;
+  transition: 600ms background-position ease-in-out;
+
+}
+
+.card-eventos:hover {
+  background-position: right;
+}
+
+.card-eventos-img {
+  display: inline-flex;
+  border: 4px solid #090f0f;
+  border-radius: 10px;
+}
+
+.img-eventos {
+  border: 4px solid #3f2f4f;
+  border-radius: 4px;
+  max-width: 400px;
+}
+
+.card-eventos-text {
+  margin: 1%;
+
+  color: white;
+  flex-grow: 1;
+}
+
+.link-vencedor {
+  background-color: rgba(0, 0, 0, 0.2);
+  text-align: center;
+  justify-content: space-around;
+  padding: 1%;
+}
+
+
+.link-vencedor a {
+  text-decoration: none;
+  color: white;
+  font-size: medium;
+  transition: color 0.3s ease;
+}
+
+.link-vencedor a:hover {
+  margin: 0.1%;
+  color: #cfab05;
+}
+/*
 
 */
 
@@ -336,6 +418,24 @@ body {
 
 
 #jogos .particle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #251c2f;
+  box-shadow: 0 0 3px white;
+  animation-duration: 60s;
+  animation-iteration-count: infinite;
+}
+
+#index .particle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #251c2f;
+  box-shadow: 0 0 3px white;
+  animation-duration: 60s;
+  animation-iteration-count: infinite;
+}
+
+#eventos .particle {
   position: absolute;
   border-radius: 50%;
   background-color: #251c2f;
@@ -571,7 +671,7 @@ body {
 }
 */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .card-menu {
     margin: auto;
     margin-top: 5%;
@@ -587,5 +687,18 @@ body {
 
   .nav .hamburger {
     margin-right: 5%;
+  }
+  .card-vencedores {
+    display: block;
+    margin-bottom: 20px; 
+  }
+
+  .img-vencedores {
+    width: 100%; 
+    height: auto; 
+  }
+
+  #menu .card-vencedores-img {
+    margin-left: 15%;
   }
 }
