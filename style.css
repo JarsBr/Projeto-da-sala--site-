@@ -701,4 +701,8 @@ body {
   #menu .card-vencedores-img {
     margin-left: 15%;
   }
+
+  .painel-jogos-genero h2{
+    font-size: medium;
+  }
 }
