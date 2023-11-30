@@ -705,4 +705,14 @@ body {
   .painel-jogos-genero h2{
     font-size: medium;
   }
+
+  .card-eventos {
+    display: block;
+    margin-bottom: 20px; 
+  }
+
+  .img-eventos {
+    width: 97%; 
+    height: auto; 
+  }
 }
